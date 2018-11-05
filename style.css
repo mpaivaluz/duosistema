@@ -1,0 +1,242 @@
+.estrutura 
+{
+background-color:#FFF;
+width:200px;
+height:100px;
+border:#000;
+border-width:10px;
+
+}
+
+a {
+	color: #000000;
+	text-decoration: none;}
+
+#main_container{
+width:990px;
+height:auto;
+padding:0px 0 0px 0; margin:auto;
+}
+
+.header_socials{
+padding:50px 0 0 0;
+float:right;
+margin:0;
+}
+.header_socials a{
+float:left; margin:0 3px 0 3px;
+}
+<!----------------Parte do menu---------------------->
+.menu {font-size:14px;padding:0px; float:left; width:890px;}
+/* remover todos os marcadores, bordas e preenchimento da lista padrão de estilo */
+.menu ul {padding:0;margin:0;list-style-type:none; height:35px;}
+/* estilizar as listas sub-nível */
+.menu ul ul {width: auto;}
+/* flutuar os itens da lista de cima para torná-lo horizontal e uma posição relativa de modo que você pode controlar a posição menu dropdown*/
+.menu ul li {float:left;height:35px;line-height:35px;}
+/* estilizar os itens da lista de sub nível */
+.menu ul ul li {display:block;width: auto;height:auto;position:relative;line-height:1em;}
+/* estilizar os links para o nível superior */
+.menu a, .menu a:visited {display:block;float:left;height:100%;font-size:14px;text-decoration:none;color:#FFFFFF;padding:0 3px 0 3px; margin:0 30px 0 0;}
+.menu a.current{ background-color:#FFFFFF;}
+/* estilizar os links sub nível */
+.menu ul ul a, .menu ul ul a:visited {display:block;font-size:13px; text-align:left; color:#000;width:200px;height:100%;line-height:1em; padding:15px 0 15px 15px;
+border-bottom:1px #ebebeb solid;background-color:#fff;}
+.menu ul table ul a, .menu ul table ul a:visited  {width:14em; w\idth:12em;}
+/* estilizar a tabela para que ela não esteje visível */
+.menu table {
+	position: absolute;
+	left: 31px;
+	top: 265px;
+	font-size: 1em;
+	z-index: -1;
+	width: 647px;
+	height: 162px;
+}
+.menu ul ul table {lef\t:-1px;}
+.menu ul ul table ul.left {margin-lef\t:2px;}
+.menu li:hover {position:relative;}
+* html .menu a:hover {position:relative;}
+/* o estilo do fundo sub nível 1 */
+.menu ul :hover a.sub1 {background:#fff;}
+/* o estilo do fundo sub nível 2 */
+.menu ul ul :hover a.sub2 {background:#fff;}
+/* style the level hovers */
+/* first */
+.menu a:hover {color:#00000;}
+.menu :hover > a {color:#00000;}
+/* segunda */
+.menu ul ul a:hover{background-color:#0000; color:#FFFFFF;}
+.menu ul ul :hover > a {background-color:#000}
+/* esconder os subníveis e dar-lhes uma posição absoluta para que eles ocupam há espaço */
+.menu ul ul {visibility:hidden;position:absolute;height:0;top:35px;left:0;width:14em; border:none; z-index:9999; background-color:#000;}
+/*posicionar o menu flutuante terceiro nível */
+.menu ul ul ul{left:14em;top:0;width:14em;}
+/* posicionar o menu flutuante terceiro nível para um menu desdobrável esquerda */
+.menu ul ul ul.left {left:-14em;}
+/* fazer o segundo nível visível quando pairar na lista primeiro nível ou link */
+.menu ul li:hover ul, .menu ul a:hover ul {visibility:visible; height:auto; padding-bottom:3em; background:transparent url(images/trans.gif);}
+
+
+/*--------------------------slides------------------------*/
+.sliderwrapper{
+width:920px; /*width of featured content slider*/
+height:292px;
+position: relative; /*leave as is*/
+overflow: hidden; /*leave as is*/
+clear:both;
+padding:30px 0 0 0;
+}
+.slider_content{
+margin:0;
+float:left;
+width:700px;
+height:292px;
+}
+#featured{ 
+width:960px; 
+padding:0; 
+position:relative;  
+height:292px; 
+}
+#featured ul.ui-tabs-nav{
+float:right;
+list-style:none; 
+padding:20px 0 0 0; margin:0; 
+width:330px;
+background:url(images/slider_details_bg.jpg) no-repeat center;
+height:272px; 
+}
+#featured ul.ui-tabs-nav li{ 
+padding:0px;  
+font-size:12px; 
+color:#fff; 
+}
+#featured li.ui-tabs-nav-item a{ 
+display:block;
+width:305px;
+height:45px; 
+color:#fff;
+background:url(images/slider_tab.png) no-repeat center;
+line-height:45px; text-decoration:none; font-weight:bold; padding:0 0 0 19px; margin:0 0 7px 0;
+float:left;
+position:relative; left:-10px; z-index:999; outline:none;
+}
+#featured li.ui-tabs-nav-item a:hover{ 
+background:url(images/slider_tab_hover.png) no-repeat center; color:#fff; 
+}
+#featured li.ui-tabs-selected{ 
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{ 
+background:url(images/slider_tab_hover.png) no-repeat center; color:#fff;
+}
+#featured .ui-tabs-panel{ 
+width:630px; height:292px; 
+position:relative;
+float:left;
+}
+#featured .ui-tabs-panel .info{ 
+position:absolute; 
+bottom:20px; left:20px;
+width:290px; 
+height:auto; 
+background: url('images/transparent-bg.png'); 
+}
+#featured .info p{
+padding:15px; margin:0px; color:#FFFFFF; font-size:11px; line-height:18px;
+}
+#featured .ui-tabs-hide{ 
+display:none; 
+}
+.center_content{
+width:960px; clear:both; padding:35px 0 0 0;
+}
+.center_content_pages{
+width:960px; clear:both; padding:15px 0 0 0;
+}
+.leftbox{
+width:290px;
+float:left;
+margin:0 45px 0 0;
+}
+.leftbox_right{
+width:290px;
+float:right;
+margin:0 0 0 0;
+}
+a.more{
+background:url(images/more_bullet.gif) no-repeat right; padding:0 25px 0 0; line-height:30px; text-decoration:none; float:right; margin:10px 0 0 0;
+}
+.news_box{
+width:290px;
+padding:0 0 20px 0;
+float:left; clear:both;
+}
+.date{
+width:71px; height:30px; background:url(images/date.gif) no-repeat center; float:left; text-align:center; color:#fff; font-size:11px; line-height:27px;
+}
+.news_box h3{font-size:14px; padding:0 0 0px 15px; margin:0px; float:left;}
+.news_box h3 a{ text-decoration:none;}
+.news_box p{width:205px; float:right;}
+.testimonial{
+background:url(images/quotes_top.jpg) no-repeat top left;
+padding:0 0 0 20px;
+margin:0 0 30px 0;
+}
+.testimonial_quotes{
+background:url(images/quotes_bottom.jpg) no-repeat bottom right;
+padding:0 20px 0 0;
+font-style:italic;
+}
+.pages_banner{ width:930px; height:80px; background:url(images/pages_banner.gif) no-repeat center; margin:0 0 20px 0; line-height:80px; font-size:24px; padding:0 0 0 30px;}
+.left_content{
+width:280px;
+float:left;
+}
+.right_content{
+width:600px;
+float:right;
+}
+ul.left_menu{
+padding:0px 0 40px 0; margin:0px; list-style:none;
+}
+ul.left_menu li{
+padding:10px 0 10px 0; margin:0px;
+}
+ul.left_menu li ul{
+padding:15px 0 5px 30px; margin:0px; list-style:none;
+}
+ul.left_menu li ul li{
+border:none;
+}
+ul.left_menu li a{
+background:url(images/list_bullet.gif) no-repeat left; color:#545554; text-decoration:none; padding:0 0 0 15px;
+}
+ul.left_menu li a:hover{
+color:#de462a;
+}
+img.pages_pic{ border:4px #fff solid; margin:0 0 20px 0;}
+
+#x {margin-bottom:200px;}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 950px;
+	margin: 0 auto;
+	padding: 30px 0;
+	border-top: 2px solid #2B2B2B;
+}
+
+#footer p {
+	margin: 0 0 5px 0;
+	text-align: center;
+	line-height: normal;
+	font-size: .9em;
+}
+
+#footer a {
+	text-decoration: none;
+}
+

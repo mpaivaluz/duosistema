@@ -1,0 +1,22 @@
+@charset "utf-8";
+.banner
+{
+	background-image:url(images/icons/banner.png);
+	
+	
+}
+
+.tracejado
+{
+border-bottom-style:dashed;
+border-bottom-color:#FFF;
+
+}
+
+.text
+{
+	padding-top:10px;
+	margin-left:10px;	
+}
+/* CSS Document */
+
