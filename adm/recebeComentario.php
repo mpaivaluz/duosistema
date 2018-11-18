@@ -8,7 +8,7 @@ $id =  $_POST['id'];
 $comentario= $_POST['coment'];
 
 
-mysqli_query ("insert into comentarios ( coment, idNoticia )values ('$comentario', $id )" );
+mysqli_query ($con, "insert into comentarios ( coment, idNoticia )values ('$comentario', $id )" );
 
 ?>
 

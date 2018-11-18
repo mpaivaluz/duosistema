@@ -9,7 +9,7 @@
 <?php
 include ("model/Conexao.class.php");
 
-$consulta= mysqli_query ("select * from curtir");
+$consulta= mysqli_query ($con, "select * from curtir");
 
 
 while($dado= mysqli_fetch_array($consulta))

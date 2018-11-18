@@ -63,7 +63,7 @@ $like = $_POST ['like'];
 
 
 
-mysqli_query ("insert into noticia (titulo, subtitulo, noticia, data, hora, imagem1, imagem2, imagem3, imagem4, curtir) values ('$titulo', '$subtitulo', '$noticia', '$data', '$hora', '$arquivo_n1', '$arquivo_n2', '$arquivo_n3', '$arquivo_n4', '$like')");
+mysqli_query ($con, "insert into noticia (titulo, subtitulo, noticia, data, hora, imagem1, imagem2, imagem3, imagem4, curtir) values ('$titulo', '$subtitulo', '$noticia', '$data', '$hora', '$arquivo_n1', '$arquivo_n2', '$arquivo_n3', '$arquivo_n4', '$like')");
 
 
 mysqli_close(); 

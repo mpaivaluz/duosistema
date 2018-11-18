@@ -8,7 +8,7 @@ $data = date ("Y,m,d");
 $hora = date('H:i');
 
 
-mysqli_query ("insert into mensagem ( email, mensagem, data, hora )values ('$email', '$mensagem', '$data', '$hora')" );
+mysqli_query ($con, "insert into mensagem ( email, mensagem, data, hora )values ('$email', '$mensagem', '$data', '$hora')" );
 
 ?>
 

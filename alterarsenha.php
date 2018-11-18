@@ -59,12 +59,12 @@ $atual = $_POST ['atual'];
 $nova = $_POST ['nova'];
 $senhac = md5 ($atual);
 
-$consulta = mysqli_query ("select * from cadastro where idCadastro='$id' and senha='$senhac'");
+$consulta = mysqli_query ($con, "select * from cadastro where idCadastro='$id' and senha='$senhac'");
 
 if (mysqli_num_rows ($consulta)>0 )
 
 {
-mysqli_query ("UPDATE cadastro SET senha='".md5($nova)." 'WHERE idCadastro='$id'");
+mysqli_query ($con, "UPDATE cadastro SET senha='".md5($nova)." 'WHERE idCadastro='$id'");
 
 $_SESSION = array();
 session_destroy();

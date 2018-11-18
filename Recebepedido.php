@@ -12,7 +12,7 @@ $data = date ("Y,m,d");
 $hora = date('H:i');
 
 
-mysqli_query ("insert into pedido (sobre, email, local, campo, eventos, data, hora) values ('$sobre', '$email',  '$local', '$campo', '$eventos', '$data', '$hora')" );
+mysqli_query ($con, "insert into pedido (sobre, email, local, campo, eventos, data, hora) values ('$sobre', '$email',  '$local', '$campo', '$eventos', '$data', '$hora')" );
 
 mysqli_close();
 

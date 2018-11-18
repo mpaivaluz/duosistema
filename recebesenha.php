@@ -7,12 +7,12 @@ $atual = $_POST ['atual'];
 $nova = $_POST ['nova'];
 $senhac = md5 ($atual);
 
-$consulta = mysqli_query ("select * from usuario where idUsuario='$id' and senha='$senhac'");
+$consulta = mysqli_query ($con, "select * from usuario where idUsuario='$id' and senha='$senhac'");
 
 if (mysqli_num_rows ($consulta)>0 )
 
 {
-mysqli_query ("UPDATE usuario SET senha='".md5($nova)." 'WHERE idUsuario='$id'");	
+mysqli_query ($con, "UPDATE usuario SET senha='".md5($nova)." 'WHERE idUsuario='$id'");	
 }
 else
 {

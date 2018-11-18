@@ -10,7 +10,7 @@ $data = date ("Y,m,d");
 $hora = date('H:i');
 
 
-$consulta = mysqli_query ("UPDATE noticia SET titulo='$titulo', subtitulo='$subtitulo', noticia='$noticia', data='$data', hora='$hora' WHERE idNoticia='$id'");
+$consulta = mysqli_query ($con, "UPDATE noticia SET titulo='$titulo', subtitulo='$subtitulo', noticia='$noticia', data='$data', hora='$hora' WHERE idNoticia='$id'");
 
 $destino="imagens/";
 $id= $_POST['id'];
@@ -21,7 +21,7 @@ $imagemtemporaria= $_FILES['imagemNova']['tmp_name'];
 if ( $imagemNova== NULL)
 {
 //deixar a imagem atual no banco
-mysqli_query ("UPDATE noticia SET imagem1='$imagemAtual' WHERE idNoticia='$id'");
+mysqli_query ($con, "UPDATE noticia SET imagem1='$imagemAtual' WHERE idNoticia='$id'");
 }
 else{
 	//atualizar a imagem selecionada no banco
@@ -31,7 +31,7 @@ else{
 	$arquivo_n = $destino.$imagemNova;
 	move_uploaded_file($imagemtemporaria,$arquivo_n);
 	
-$consulta = mysqli_query ("UPDATE noticia SET imagem1='$arquivo_n' WHERE idNoticia='$id'");
+$consulta = mysqli_query ($con, "UPDATE noticia SET imagem1='$arquivo_n' WHERE idNoticia='$id'");
 	
 }
 
@@ -46,7 +46,7 @@ $imagemtemporaria= $_FILES['imagemNova2']['tmp_name'];
 if ( $imagemNova== NULL)
 {
 //deixar a imagem atual no banco
-mysqli_query ("UPDATE noticia SET imagem2=$imagemAtual' WHERE idNoticia='$id'");
+mysqli_query ($con, "UPDATE noticia SET imagem2=$imagemAtual' WHERE idNoticia='$id'");
 }
 else{
 	//atualizar a imagem selecionada no banco
@@ -56,7 +56,7 @@ else{
 	$arquivo_n2 = $destino.$imagemNova;
 	move_uploaded_file($imagemtemporaria,$arquivo_n2);
 	
-$consulta = mysqli_query ("UPDATE noticia SET imagem2='$arquivo_n2' WHERE idNoticia='$id'");
+$consulta = mysqli_query ($con, "UPDATE noticia SET imagem2='$arquivo_n2' WHERE idNoticia='$id'");
 	
 }
 
@@ -70,7 +70,7 @@ $imagemtemporaria= $_FILES['imagemNova3']['tmp_name'];
 if ( $imagemNova== NULL)
 {
 //deixar a imagem atual no banco
-mysqli_query ("UPDATE noticia SET imagem3='$imagemAtual' WHERE idNoticia='$id'");
+mysqli_query ($con, "UPDATE noticia SET imagem3='$imagemAtual' WHERE idNoticia='$id'");
 }
 else{
 	//atualizar a imagem selecionada no banco
@@ -80,7 +80,7 @@ else{
 	$arquivo_n3 = $destino.$imagemNova;
 	move_uploaded_file($imagemtemporaria,$arquivo_n3);
 	
-$consulta = mysqli_query ("UPDATE noticia SET imagem3='$arquivo_n3' WHERE idNoticia='$id'");
+$consulta = mysqli_query ($con, "UPDATE noticia SET imagem3='$arquivo_n3' WHERE idNoticia='$id'");
 	
 }
 
@@ -94,7 +94,7 @@ $imagemtemporaria= $_FILES['imagemNova4']['tmp_name'];
 if ( $imagemNova== NULL)
 {
 //deixar a imagem atual no banco
-mysqli_query ("UPDATE noticia SET imagem4='$imagemAtual' WHERE idNoticia='$id'");
+mysqli_query ($con, "UPDATE noticia SET imagem4='$imagemAtual' WHERE idNoticia='$id'");
 }
 else{
 	//atualizar a imagem selecionada no banco
@@ -104,7 +104,7 @@ else{
 	$arquivo_n4 = $destino.$imagemNova;
 	move_uploaded_file($imagemtemporaria,$arquivo_n4);
 	
-$consulta = mysqli_query ("UPDATE noticia SET imagem4='$arquivo_n4' WHERE idNoticia='$id'");
+$consulta = mysqli_query ($con, "UPDATE noticia SET imagem4='$arquivo_n4' WHERE idNoticia='$id'");
 	
 }
 

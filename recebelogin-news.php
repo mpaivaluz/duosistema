@@ -6,7 +6,7 @@ $senha= $_POST ["senha"];
 $senhac = md5 ($senha);
 
 
-$consulta = mysqli_query ("SELECT * FROM `cadastro` WHERE usuario='$usuario' and senha='$senhac' ");
+$consulta = mysqli_query ($con, "SELECT * FROM `cadastro` WHERE usuario='$usuario' and senha='$senhac' ");
 
 if (mysqli_num_rows ($consulta) > 0 )
 {
