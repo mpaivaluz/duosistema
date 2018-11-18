@@ -8,7 +8,7 @@
 <body>
 <?php
 include ("model/Conexao.class.php");
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta= mysqli_query ($con, "select * from curtir");
 
 

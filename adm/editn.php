@@ -9,7 +9,7 @@ date_default_timezone_set('America/Sao_Paulo');
 $data = date ("Y,m,d");
 $hora = date('H:i');
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ($con, "UPDATE noticia SET titulo='$titulo', subtitulo='$subtitulo', noticia='$noticia', data='$data', hora='$hora' WHERE idNoticia='$id'");
 
 $destino="imagens/";

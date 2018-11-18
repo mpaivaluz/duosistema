@@ -6,7 +6,7 @@ $id = $_GET ['id'];
 $atual = $_POST ['atual'];
 $nova = $_POST ['nova'];
 $senhac = md5 ($atual);
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ($con, "select * from usuario where idUsuario='$id' and senha='$senhac'");
 
 if (mysqli_num_rows ($consulta)>0 )

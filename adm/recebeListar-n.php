@@ -108,7 +108,7 @@ if (isset($_POST['pesquisar']))
 {
 $pesquisa= $_POST['pesq'];
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta= mysqli_query ($con, "select * from noticia where titulo  LIKE '%$pesquisa%' or subtitulo LIKE '%$pesquisa%' or noticia LIKE '%$pesquisa%' ");
 
 

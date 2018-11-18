@@ -62,7 +62,7 @@ $hora = date('H:i');
 $like = $_POST ['like'];
 
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 mysqli_query ($con, "insert into noticia (titulo, subtitulo, noticia, data, hora, imagem1, imagem2, imagem3, imagem4, curtir) values ('$titulo', '$subtitulo', '$noticia', '$data', '$hora', '$arquivo_n1', '$arquivo_n2', '$arquivo_n3', '$arquivo_n4', '$like')");
 
 

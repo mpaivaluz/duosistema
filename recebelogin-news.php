@@ -5,7 +5,7 @@ $usuario = $_POST ['usuario'];
 $senha= $_POST ["senha"];
 $senhac = md5 ($senha);
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ($con, "SELECT * FROM `cadastro` WHERE usuario='$usuario' and senha='$senhac' ");
 
 if (mysqli_num_rows ($consulta) > 0 )

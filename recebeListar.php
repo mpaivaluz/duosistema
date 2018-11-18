@@ -49,7 +49,7 @@ $sessaoUsuario = $_SESSION ['usuario'];
 $sessaoSenha = $_SESSION ['senha'];
 $sessaoSenhac= md5($sessaoSenha);
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 ?>

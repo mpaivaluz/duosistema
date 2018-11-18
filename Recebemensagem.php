@@ -7,7 +7,7 @@ date_default_timezone_set('America/Sao_Paulo');
 $data = date ("Y,m,d");
 $hora = date('H:i');
 
-
+$con=mysqli_connect("localhost","root","","tabela");
 mysqli_query ($con, "insert into mensagem ( email, mensagem, data, hora )values ('$email', '$mensagem', '$data', '$hora')" );
 
 ?>
