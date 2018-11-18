@@ -55,7 +55,7 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
     
     <div class="menu">
         <ul>
-        <li><a href="home.php">Pagina Inicial</a></li>
+        <li><a href="home.php">Pagina 2 Inicial</a></li>
         <li><a href="about.php">A Empresa<!--[if IE 7]><!--></a><!--<![endif]-->
         <!--[if lte IE 6]><table><tr><td><![endif]-->
             <ul>
