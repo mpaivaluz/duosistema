@@ -27,8 +27,8 @@ $telefone= $_POST ["telefone"];
 $usuario= $_POST ["login"];
 $senha= $_POST ["senha"];
 $senhac = md5 ($senha);
-
-mysqli_query("insert into cadastro ( nome, sobrenome, email, telefone, usuario, senha, imagem )values ('$nome', '$sobrenome', '$email', '$telefone', '$usuario', '$senhac', '$arquivo_n')" );
+$con=mysqli_connect("localhost","root","","tabela");
+mysqli_query($con, "insert into cadastro ( nome, sobrenome, email, telefone, usuario, senha, imagem )values ('$nome', '$sobrenome', '$email', '$telefone', '$usuario', '$senhac', '$arquivo_n')" );
 
 }
 ?>
