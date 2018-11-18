@@ -1,5 +1,5 @@
 ﻿<?php
-include ("model/Conexao.class.php");
+include ("conexao.php");
 	
 $id = $_POST ['id'];
 $titulo = $_POST ['titulo'];

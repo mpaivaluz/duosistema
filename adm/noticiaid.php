@@ -104,7 +104,7 @@ include ("painel-logado-user.php")
 
 	if (isset ($_POST ['publicar' ])) {
 	
-include ("model/Conexao.class.php");
+include ("conexao.php");
 
 $id =  $_POST['id'];
 $comentario= $_POST['coment'];

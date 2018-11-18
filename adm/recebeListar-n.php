@@ -93,7 +93,7 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
    
 
 <?php 
- include ("model/Conexao.class.php");
+ include ("conexao.php");
 ?>
 <div class="center_content">
 

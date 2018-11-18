@@ -1,5 +1,5 @@
 ﻿<?php
-include ("model/Conexao.class.php");
+include ("conexao.php");
 
 if (isset ($_FILES ['imagem'])) {
 	

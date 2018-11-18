@@ -1,5 +1,5 @@
 ﻿<?php 
-include ("model/Conexao.class.php");
+include ("conexao.php");
 if (isset ($_FILES ['imagem1' ])) {
 	
 	$arquivo = $_FILES ['imagem1'];
@@ -12,7 +12,7 @@ if (isset ($_FILES ['imagem1' ])) {
 	
 	$arquivo_n1 = $pasta_dir.$arquivo["name"]; move_uploaded_file($arquivo ["tmp_name"], $arquivo_n1); 
 	
-	include ("model/Conexao.class.php");
+	include ("conexao.php");
 if (isset ($_FILES ['imagem2' ])) {
 	
 	$arquivo = $_FILES ['imagem2'];

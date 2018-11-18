@@ -1,7 +1,7 @@
 ﻿<?php
 if (isset ($_POST ['validar']))
 {
-include ("model/Conexao.class.php");
+include ("conexao.php");
 $id = $_GET ['id'];
 $atual = $_POST ['atual'];
 $nova = $_POST ['nova'];

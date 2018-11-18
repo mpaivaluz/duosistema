@@ -1,6 +1,6 @@
 <?php
 include ("painel-logado-adm.php");
-include ("model/Conexao.class.php");
+include ("conexao.php");
 ?>
 
 </head>

@@ -133,7 +133,7 @@ while ($dados = mysqli_fetch_array ($consulta))
    
 
 <?php 
- include ("model/Conexao.class.php");
+ include ("conexao.php");
 ?>
 <div class="center_content">
 

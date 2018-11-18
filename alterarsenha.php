@@ -53,7 +53,7 @@ var sprypassword2 = new Spry.Widget.ValidationPassword("sprypassword2");
 <?php
 if (isset ($_POST ['enviar']))
 {
-include ("model/Conexao.class.php");
+include ("conexao.php");
 $id = $_GET ['id'];
 $atual = $_POST ['atual'];
 $nova = $_POST ['nova'];

@@ -20,7 +20,7 @@ include ("conexao.php");
 
 <?php
 
-//include ("model/Conexao.class.php");
+//include ("conexao.php");
 $id = $_GET['id'];
 $con=mysqli_connect("localhost","root","","tabela");
 $query = mysqli_query ($con, "select * from cadastro where idCadastro='$id'");

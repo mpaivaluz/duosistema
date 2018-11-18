@@ -34,7 +34,7 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
 <div class="container">
 
         <?php
-include ("model/Conexao.class.php");
+include ("conexao.php");
 ?>
 
 <?php
@@ -135,7 +135,7 @@ while ($dados = mysqli_fetch_array ($consulta))
    
 
 <?php 
- include ("model/Conexao.class.php");
+ include ("conexao.php");
 ?>
 <div class="center_content">
 

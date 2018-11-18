@@ -1,6 +1,6 @@
 ﻿<?php
 {
-include ("model/Conexao.class.php");
+include ("conexao.php");
 $email= $_POST ['email'];
 $mensagem= $_POST ['campo'];
 date_default_timezone_set('America/Sao_Paulo');

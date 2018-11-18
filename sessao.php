@@ -1,7 +1,7 @@
 ﻿<link rel="stylesheet" type="text/css" href="border.css" />
 
 <?php
-include ("model/Conexao.class.php");
+include ("conexao.php");
 ?>
 
 <?php

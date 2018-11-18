@@ -1,6 +1,6 @@
 ﻿<?php
 {
-include ("model/Conexao.class.php");
+include ("conexao.php");
 $usuario = $_POST ['usuario'];
 $senha= $_POST ["senha"];
 $senhac = md5 ($senha);

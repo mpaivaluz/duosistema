@@ -1,7 +1,7 @@
 ﻿<?php
 
 {
-include ("model/Conexao.class.php");
+include ("conexao.php");
 $sobre= $_POST ["sobre"];
 $email= $_POST ["email"];
 $local= $_POST ["local"];

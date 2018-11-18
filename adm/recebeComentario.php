@@ -2,7 +2,7 @@
 {
 	
 	
-include ("model/Conexao.class.php");
+include ("conexao.php");
 
 $id =  $_POST['id'];
 $comentario= $_POST['coment'];

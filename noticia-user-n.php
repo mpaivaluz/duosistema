@@ -1,6 +1,6 @@
 <?php
 include ("painel.php");
-include ("model/Conexao.class.php");
+include ("conexao.php");
 include ("model/Manager.class.php");
 
 $manager = new Manager();
