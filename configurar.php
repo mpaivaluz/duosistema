@@ -7,8 +7,8 @@ $sobre = $_POST ['sobre'];
 $email = $_POST ['email'];
 $telefone = $_POST ['telefone'];
 
-
-$consulta = mysqli_query ("UPDATE cadastro SET nome='$nome', sobrenome='$sobre', email='$email', telefone='$telefone' WHERE idCadastro='$id'");
+$con=mysqli_connect("localhost","root","","tabela");
+$consulta = mysqli_query ($con, "UPDATE cadastro SET nome='$nome', sobrenome='$sobre', email='$email', telefone='$telefone' WHERE idCadastro='$id'");
 
 $destino="imagens/";
 $id= $_POST['id'];
@@ -19,7 +19,7 @@ $imagemtemporaria= $_FILES['imagemNova']['tmp_name'];
 if ( $imagemNova== NULL)
 {
 //deixar a imagem atual no banco
-mysqli_query ("UPDATE cadastro SET imagem='$imagemAtual' WHERE idCadastro='$id'");
+mysqli_query ($con, "UPDATE cadastro SET imagem='$imagemAtual' WHERE idCadastro='$id'");
 }
 else{
 	//atualizar a imagem selecionada no banco
@@ -29,7 +29,7 @@ else{
 	$arquivo_n = $destino.$imagemNova;
 	move_uploaded_file($imagemtemporaria,$arquivo_n);
 	
-$consulta = mysqli_query ("UPDATE cadastro SET imagem='$arquivo_n' WHERE idCadastro='$id'");
+$consulta = mysqli_query ($con, "UPDATE cadastro SET imagem='$arquivo_n' WHERE idCadastro='$id'");
 	
 }
 

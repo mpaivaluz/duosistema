@@ -22,8 +22,8 @@ include ("conexao.php");
 
 //include ("model/Conexao.class.php");
 $id = $_GET['id'];
-
-$query = mysqli_query ("select * from cadastro where idCadastro='$id'");
+$con=mysqli_connect("localhost","root","","tabela");
+$query = mysqli_query ($con, "select * from cadastro where idCadastro='$id'");
 
 while ($dados = mysqli_fetch_array($query)) 
 	
@@ -117,7 +117,7 @@ while ($dados = mysqli_fetch_array($query))
       <td width="100%" align="left" colspan="2"> <h5> 
       <?php 
  
- $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
+ $consulta = mysqli_query ($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 while ($dados = mysqli_fetch_array ($consulta))
 				{?>

@@ -1,5 +1,5 @@
 <?php
-include ("model/Conexao.class.php");
+include ("conexao.php");
 include ("painel-logado.php");
 
 ?>
@@ -22,8 +22,8 @@ include ("painel-logado.php");
 
 <?php
  
-	$query = mysql_query ("SELECT * FROM noticia ORDER BY data DESC, hora DESC");
-	while ($dados = mysql_fetch_array ($query))
+	$query = mysqli_query($con, "SELECT * FROM noticia ORDER BY data DESC, hora DESC");
+	while ($dados = mysqli_fetch_array ($query))
 	
 	{ ?>
     <table  bordercolor="#FFFFFF" width="90%">

@@ -1,13 +1,13 @@
 <?php
-include ("painel-logado.php")
-
+include ("painel-logado.php");
+include ("conexao.php");
 ?>
 
 
 <?php
-	include("conexao.php");
+	
 			$idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 									
 			}
@@ -15,51 +15,52 @@ include ("painel-logado.php")
                    <div class="center_content">
              <font face=color="#333333"> <i><h5>Publicado <?php
 	  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+	  $con=mysqli_connect("localhost","root","","tabela");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 				 echo "".date('d/m/Y', strtotime($dados['data'])); ?> às <?php echo "".date('H:i', strtotime($dados['hora']));?> </h5></i> </font>
             <img src="images/perfil/Sem Título-3.png" /><br />
               <font size="+2"><b><?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 			  echo "".$dados['titulo'].""; } ?> </font></b><br />
               
               
               <font size="+1"><?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 			  echo "".$dados['subtitulo'].""; } ?> </font>
 
               
               <?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
               		echo "<br/><br /><left><div><img width=\"553\" height=\"343\" src=\"".$dados['imagem1']."\" /></h3></div></center>";}?>
                     
                     <?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 			  echo "".$dados['noticia'].""; } ?>
               <br /><br />
                     <?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
               		echo "<left><div><img width=\"553\" height=\"343\" src=\"".$dados['imagem2']."\" /></h3></div></center>";}?>
                     
                     <?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
               		echo "<left><div><img width=\"553\" height=\"343\" src=\"".$dados['imagem3']."\" /></h3></div></center>";}?>
                     
                    <?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
               		echo "<left><div><img width=\"553\" height=\"343\" src=\"".$dados['imagem4']."\" /></h3></div></center>";}?>            
  
@@ -68,7 +69,7 @@ include ("painel-logado.php")
     <tr>
       <td width="70%" align="left"> <font color="#0000">  <img src="imagens/like4like.png" width="14" height="14"/><?php 
 			  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){ echo"<a href=\"click.php?id=".$dados['idNoticia']." style=\"text-decoration:\"none\"\"> <font size=\"-1\"> <b>Curtir</b> </a> "; ?> 
   • <b>Comentar</b></font>	  <br />
                
@@ -102,7 +103,7 @@ include ("painel-logado.php")
         <!--- Comentar e exibir na mesma tela -->
       <tr>
       <td width="70%" align="left"><input type="submit" value="Comentar" name="publicar" /> </form> <div class="leftbox_right"><font size="-1"><b><?php $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
+			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){echo $dados['curtir'];}?> pessoas curtiram essa publicação</b></font></div></td></tr>
       
       </table>
@@ -112,15 +113,13 @@ include ("painel-logado.php")
 
 	if (isset ($_POST ['publicar' ])) {
 	
-include ("model/Conexao.class.php");
-
 $id =  $_POST['id'];
 $comentario= $_POST['coment'];
 date_default_timezone_set('America/Sao_Paulo');
 $data = date ("Y,m,d");
 $hora = date('H:i');
 
-mysqli_query ("insert into comentarios ( coment,  idNoticia, date, hora )values ('$comentario', '$id', '$data', '$hora' )" );
+mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )values ('$comentario', '$id', '$data', '$hora' )" );
 
 	} ?>
 
@@ -144,7 +143,7 @@ mysqli_query ("insert into comentarios ( coment,  idNoticia, date, hora )values 
           
 		                
 			<b><?php  $idnoticia = $_GET['id'];
-			$query = mysqli_query("SELECT * FROM comentarios  WHERE idNoticia = '$idnoticia' ");
+			$query = mysqli_query($con, "SELECT * FROM comentarios  WHERE idNoticia = '$idnoticia' ");
 			while ($dados = mysqli_fetch_array($query)) 
 {
 			 
