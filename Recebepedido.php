@@ -14,7 +14,7 @@ $hora = date('H:i');
 $con=mysqli_connect("localhost","root","","tabela");
 mysqli_query ($con, "insert into pedido (sobre, email, local, campo, eventos, data, hora) values ('$sobre', '$email',  '$local', '$campo', '$eventos', '$data', '$hora')" );
 
-mysqli_close();
+mysqli_close($con);
 
 echo "<script language='javascript' type='text/javascript'>alert('Seu pedido foi enviado. Em breve você receberá um e-mail de resposta, aguarde e muito obrigado por confiar na Duo!');window.location.href='pedido.php'</script>";
 

@@ -1,7 +1,7 @@
 <?php
 include ("painel.php");
 include ("conexao.php");
-include ("model/Manager.class.php");
+
 
 ?>
 
@@ -22,7 +22,7 @@ include ("model/Manager.class.php");
 
 
 
-<form name="frmLogin" method="post" action="controller/recebelogin-pedido.php">
+<form name="frmLogin" method="post" action="recebelogin.php">
 
 
 <p>

@@ -1,5 +1,6 @@
 <?php 
 include ("painel-logado.php");
+include ("conexao.php");
 ?>
 
 <link href="SpryAssets2/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
@@ -22,7 +23,7 @@ include ("painel-logado.php");
       <select name="eventos" id="eventos">
         <option> Selecione o gênero </option>
         <?php 
-	include ("conexao.php");
+	
   $con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ($con, "select * from eventos;");  
 $numero_Linhas= mysqli_num_rows ($consulta);
@@ -49,7 +50,7 @@ for ($i=1; $i<=$numero_Linhas; $i++)
 
 
    <?php 
- 
+$con=mysqli_connect("localhost","root","","tabela");
  $consulta = mysqli_query ($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 while ($dados = mysqli_fetch_array ($consulta))

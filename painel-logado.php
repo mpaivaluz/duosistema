@@ -34,7 +34,7 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
 <div class="container">
 
         <?php
-include ("conexao.php");
+include ("model/Conexao.class.php");
 include ("model/Manager.class.php");
 ?>
 
