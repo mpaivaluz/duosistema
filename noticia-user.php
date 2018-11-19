@@ -131,7 +131,7 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
 
 <img src="images/perfil/Sem Título-3.png" /><br />
 
-<font color="#0000"><b>Comentários </b></font><br />
+<font color="#0000"><b>Comentários teste</b></font><br />
 </form>
 
 <table width="100%" border="0">
