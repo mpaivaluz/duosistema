@@ -50,7 +50,7 @@ $sessaoSenha = $_SESSION ['senha'];
 $sessaoSenhac= md5($sessaoSenha);
 
 $con=mysqli_connect("localhost","root","","tabela");
-$consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
+$consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 ?>
 <div id="main_container">
@@ -111,7 +111,7 @@ $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuari
           
            <?php 
  
- $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
+ $consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 while ($dados = mysqli_fetch_array ($consulta))
 				{?>

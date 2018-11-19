@@ -91,7 +91,7 @@ include ("conexao.php");
         <?php 
       
 
-			$consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenha'");
+			$consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenha'");
 
 			while($dados = mysqli_fetch_array($consulta)){
 			

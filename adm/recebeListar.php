@@ -51,7 +51,7 @@ if ((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['usuario']) =
 $sessaoUsuario = $_SESSION ['usuario'];
 $sessaoSenha = $_SESSION ['senha'];
 $sessaoSenhac= md5($sessaoSenha);
-$consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
+$consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 			
 
 ?>
@@ -108,7 +108,7 @@ $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuari
 				?><img src="../imagens/icones/transparencia.png" />
 				 <?php echo "".$dados['nome'].""; ?>  <?php echo "".$dados['sobrenome'].""; }?><img src="../imagens/icones/transparencia.png" />▼</a>
                  
-        <ul><?php  $consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
+        <ul><?php  $consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 while ($dados = mysqli_fetch_array ($consulta))
 				{?>
