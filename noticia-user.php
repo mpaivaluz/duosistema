@@ -91,7 +91,7 @@ include ("conexao.php");
         <?php 
       
 
-			$consulta = mysqli_query ( "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenha'");
+			$consulta = mysqli_query($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenha'");
 
 			while($dados = mysqli_fetch_array($consulta)){
 			
@@ -160,7 +160,7 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
 
        <div id="footer">
 	<p class="legal">
-		&copy;2014, Centro Educacional Marista  <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
+		&copy;2014, Centro Educacional Marista teste  <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
 		Desenvolvido por <a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Lucas Lunardelli</b></a>
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
