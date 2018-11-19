@@ -131,7 +131,11 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
 
 <img src="images/perfil/Sem Título-3.png" /><br />
 
+<<<<<<< HEAD
 <font color="#0000"><b>Comentários 2</b></font><br />
+=======
+<font color="#0000"><b>Comentários teste</b></font><br />
+>>>>>>> ec9fd832f5cf7e63a2588c96eb37bd588e7f3e51
 </form>
 
 <table width="100%" border="0">
@@ -160,7 +164,7 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
 
        <div id="footer">
 	<p class="legal">
-		&copy;2014, Centro Educacional Marista teste  <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
+		&copy;2014, Centro Educacional Marista <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
 		Desenvolvido por <a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Lucas Lunardelli</b></a>
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
