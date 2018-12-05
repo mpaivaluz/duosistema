@@ -38,7 +38,8 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
 <div id="main_container">
 
         
-	<div class="header"><a href="home.php"><div align="left"><img src="logo novo definitivo 2.png" /></a>    <div class="leftbox_right"><br /><br /><form  action="recebeListar-n.php" method="post">
+  <div class="header"><a href="home.php"><div align="left"><img src="logo novo definitivo 2.png" /></a>    <div class="leftbox_right"><br /><br />
+  <form  action="recebeListar-n.php" method="post">
         <input type="text" placeholder="Pesquisar no site"  name="pesq"/>
         <input type="hidden" value="Buscar" name="pesquisar" />
         </form></div></div>

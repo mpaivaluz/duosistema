@@ -7,6 +7,7 @@ include ("conexao.php");
 <?php
 	
 			$idnoticia = $_GET['id'];
+			$con=mysqli_connect("localhost","root","","tabela");
 			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
 			while ($dados = mysqli_fetch_array($query)){
 									
@@ -131,11 +132,10 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
 
 <img src="images/perfil/Sem Título-3.png" /><br />
 
-<<<<<<< HEAD
-<font color="#0000"><b>Comentários 2</b></font><br />
-=======
-<font color="#0000"><b>Comentários teste</b></font><br />
->>>>>>> ec9fd832f5cf7e63a2588c96eb37bd588e7f3e51
+
+<font color="#0000"><b>Comentários </b></font><br />
+
+
 </form>
 
 <table width="100%" border="0">

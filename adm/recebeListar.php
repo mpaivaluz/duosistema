@@ -44,7 +44,7 @@ if ((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['usuario']) =
 	unset ($_SESSION ['usuario']); 
 	unset ($_SESSION ['senha']);
 
-	header('location:login2.php');
+	header('location:../login.php');
 	
 }
 

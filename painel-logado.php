@@ -34,8 +34,7 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
 <div class="container">
 
         <?php
-include ("model/Conexao.class.php");
-include ("model/Manager.class.php");
+include ("conexao.php");
 ?>
 
 <?php
@@ -54,10 +53,15 @@ $con=mysqli_connect("localhost","root","","tabela");
 $consulta = mysqli_query ($con, "select * from cadastro where usuario ='$sessaoUsuario' and senha = '$sessaoSenhac'");
 
 ?>
+
 <div id="main_container">
 
         
-	<div class="header"><a href="home-logado.php"><img src="logo novo definitivo 2.png" /></a>
+  <div class="header"><a href="home-logado.php"><img src="logo novo definitivo 2.png" /></a><div class="leftbox_right">
+  <form  action="recebeListar-n.php" method="post">
+        <input type="text" placeholder="Pesquisar no site"  name="pesq"/>
+        <input type="hidden" value="Buscar" name="pesquisar" />
+        </form></div>
 	  <div class="slogan"></div> 
         
 	  <div class="header_socials">

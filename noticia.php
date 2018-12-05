@@ -1,5 +1,4 @@
 <?php
-include ("conexao.php");
 include ("painel-logado-adm.php");
 ?>
 

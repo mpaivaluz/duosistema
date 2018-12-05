@@ -25,39 +25,39 @@ Cufon.replace('h2', { fontFamily: 'GeosansLight' });
 
 <body>
 
-<div id="slider1" class="sliderwrapper">
+ <div id="slider1" class="sliderwrapper">
 	<div class="slider_content">
 		<div id="featured">
         <div id="fragment-1" class="ui-tabs-panel" style="">
-            <a href="pagina-aniversarios.php"><img src="images/sl1.jpg" alt="" title="" border="0" /></a>
+            <img src="images/sl1.jpg" alt="" title="" border="0" />
             <div class="info" >
             <p>Aniversários! Confira aqui as fotos das festas de aniversários realizadas pela Duo Produções.</p>
             </div>
         </div>
         
         <div id="fragment-2" class="ui-tabs-panel" style="">
-            <a href="pagina-formaturas.php"><img src="images/sl2.jpg" alt="" title="" border="0" /></a>
+            <img src="images/sl2.jpg" alt="" title="" border="0" />
             <div class="info" >
             <p>Formaturas! Sua turma vai se formar e ficou tudo na sua mão para resolver? Calma, a nossa equipe vai te ajudar!</p>
             </div>
         </div>
         
         <div id="fragment-3" class="ui-tabs-panel" style="">
-            <a href="subpag-equipe.php"><img src="images/sl3.jpg" alt="" title="" border="0" /></a>
+            <img src="images/sl3.jpg" alt="" title="" border="0" />
             <div class="info" >
             <p>Acessoria, aqui você vai conhecer um pouco da equipe da Duo.</p>
             </div>
         </div>
         
         <div id="fragment-4" class="ui-tabs-panel" style="">
-            <a href="pagina-casamentos.php"><img src="images/sl6.jpg" alt="" title="" border="0" /></a>
+            <img src="images/sl6.jpg" alt="" title="" border="0" />
             <div class="info" >
             <p>Casamentos! Procurando o local perfeito para sua festa de casamento? Conte com a Duo!</p>
             </div>
         </div>
         
         <div id="fragment-5" class="ui-tabs-panel" style="">
-            <a href="pagina-corporativos.php"><img src="images/sl5.jpg" alt="" title="" border="0" /></a>
+            <img src="images/sl5.jpg" alt="" title="" border="0" />
             <div class="info" >
             <p>Eventos corporativos! Saiba como anda o funcionamento de acessoria para eventos empresariais! </p>
             </div>

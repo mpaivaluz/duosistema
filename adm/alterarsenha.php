@@ -1,5 +1,5 @@
 <?php 
-include ("painel-logado.php")
+include ("painel-logado.php");
 ?>
 
 

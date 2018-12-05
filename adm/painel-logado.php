@@ -55,7 +55,8 @@ $consulta = mysqli_query ($con,"select * from adm where nome ='$sessaoUsuario' a
 <div id="main_container">
 
         
-	<div class="header"><a href="home.php"><div align="left"><img src="logo novo definitivo 2.png" /></div></a>
+  <div class="header"><a href="home.php"><div align="left"><img src="logo novo definitivo 2.png" /></div></a>
+
 	  <div class="slogan"></div> 
         
 	  <div class="header_socials">

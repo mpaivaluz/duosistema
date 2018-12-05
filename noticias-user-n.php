@@ -1,15 +1,10 @@
 <?php
-include ("painel.php");
-include ("model/Conexao.Class.php");
-include ("model/Manager.class.php");
-
-$manager = new Manager();
+include ("painel.php")
 
 ?>
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
@@ -18,27 +13,32 @@ $manager = new Manager();
 </head>
 <div class="center_content">
 <body>
-	<h3>Últimas notícias</h3>
+<?php include ("conexao.php");
+?>
+
+
+<h3>Últimas notícias</h3>
 
 
 
+<?php
+	$con=mysqli_connect("localhost","root","","tabela");
+	$query = mysqli_query($con, "SELECT * FROM noticia ORDER BY data DESC, hora DESC");
+	while ($dados = mysqli_fetch_array ($query))
+	
+	{ ?>
     <table  bordercolor="#FFFFFF" width="90%">
-	<tbody>
-	<?php foreach($manager->listarnoticias("noticia", "hora") as $dados): ?>
 		<tr style="border: 1px solid #999">
         <?php 
 	
 		 echo "<td width=\"30%\" style=\"border: 1px solid #fff\"><img width=\"290\" height=\"170\" src=\"".$dados['imagem1']."\" /></td>"; ?>
 			<td width="70%" style="border: 1px solid #fff"><b><?php echo "".$dados['titulo']."";?></b><br /><?php {
 			  echo "".$dados['subtitulo'].""; } ?><br /><br /><?php echo "<a href=\"noticia-user-n.php?id=".$dados['idNoticia']."\"><img src=\"imagens/bt-mais.png\" /></a></td>"; ?></td>
-            		</tr>
-					<?php endforeach; ?>
-					</tbody>
-					</table> 
+            		</tr></table> 
                     
                     
                     
-<br />
+<?php } ?><br />
 <br />
 
 

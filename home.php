@@ -25,7 +25,7 @@ A DUO Produções e Eventos é uma empresa voltada para a área de eventos e gos
 <br />
 
 <div class="pages_banner">
-Notícias
+Segmentos
 </div>
 
 <div class="leftbox">
