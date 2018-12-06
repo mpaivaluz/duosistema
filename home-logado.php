@@ -25,36 +25,30 @@ A DUO Produções e Eventos é uma empresa voltada para a área de eventos e gos
 <br />
 
 <div class="pages_banner">
-Notícias
+Segmentos
 </div>
 
 <div class="leftbox">
-<h3>Formatura PUC 2014</h3><br />
-<a href="pagina-formaturas.php"><img src="images/news/form.jpg" /><br /></a>
-Confia aqui fotos da fachada de entrada
-dos formandos de Arquitetura da PUC (2014).<br />
-<a href="pagina-formaturas.php"><img src="images/bt-mais.png" /></a>
+<h3>Eventos realizados</h3><br />
+<a href="sub-eventos.php"><img src="images/news/eventos.png" /><br /></a>
+<br />
+<a href="sub-eventos.php"><img src="images/bt-mais.png" /></a>
 </div>
 
 <div class="leftbox">
-<h3>Casamento de Regi e Ricarinho</h3><br />
-<a href="pagina-casamentos.php"><img src="images/news/casamento.jpg" /><br /></a>
-Confia aqui fotos da fachada do casamento
-de Regi e Ricardinho, realizado pela <i>Duo</i>.<br />
-<a href="pagina-casamentos.php"><img src="images/bt-mais.png" /></a>
+<h3>Contatos empresariais</h3><br />
+<a href="sub-empr.php"><img src="images/news/corporativo.png" /><br /></a>
+<br />
+<a href="sub-empr.php"><img src="images/bt-mais.png" /></a>
 </div>
 
 <div class="leftbox_right">
-<h3>Festa de 15 Anos Marcelle</h3><br />
-<a href="pagina-aniversarios.php"><img src="images/news/marcelle.jpg" /><br /></a>
-Fotos de ensaio de aniversário da
-Marcelle Alves.<br />
+<h3>Contatos formaturas</h3><br />
+<a href="pagina-aniversarios.php"><img src="images/news/formatura.png" /><br /></a>
+<br />
 <a href="pagina-aniversarios.php"><img src="images/bt-mais.png" /></a><br />
 <br />
 <br />
-
-
-</div>
 
 
 </div>

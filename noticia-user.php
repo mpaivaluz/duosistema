@@ -2,8 +2,15 @@
 include ("painel-logado.php");
 include ("conexao.php");
 ?>
-
-
+<meta property="fb:app_id" content="553974688290100"/>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=553974688290100&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php
 	
 			$idnoticia = $_GET['id'];
@@ -68,13 +75,11 @@ include ("conexao.php");
  <!--- Curtir -->                    
 <table id="tabCores" width="400" border="0" bgcolor="#DCDCDC">
     <tr>
-      <td width="70%" align="left"> <font color="#0000">  <img src="imagens/like4like.png" width="14" height="14"/><?php 
-			  $idnoticia = $_GET['id'];
-			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
-			while ($dados = mysqli_fetch_array($query)){ echo"<a href=\"click.php?id=".$dados['idNoticia']." style=\"text-decoration:\"none\"\"> <font size=\"-1\"> <b>Curtir</b> </a> "; ?> 
-  • <b>Comentar</b></font>	  <br />
+
+
+
                
-               
+          <!---     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvendaspaivadigital%2Fposts%2F345092676240769&width=500" width="500" height="256" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                        
 </tr>
 
@@ -105,7 +110,7 @@ include ("conexao.php");
       <tr>
       <td width="70%" align="left"><input type="submit" value="Comentar" name="publicar" /> </form> <div class="leftbox_right"><font size="-1"><b><?php $idnoticia = $_GET['id'];
 			$query = mysqli_query($con, "SELECT * FROM noticia WHERE idNoticia = '$idnoticia'");
-			while ($dados = mysqli_fetch_array($query)){echo $dados['curtir'];}?> pessoas curtiram essa publicação</b></font></div></td></tr>
+			?> </b></font></div></td></tr>
       
       </table>
  
@@ -157,24 +162,13 @@ mysqli_query ($con, "insert into comentarios ( coment,  idNoticia, date, hora )v
    				 echo "<td width=\"60%\">".$dados['coment']."" ?> <br /> <font color="#333333" size="-1"><b><?php  echo "".date('d/m/Y', strtotime($dados['date'])); ?> às <?php echo "".date('H:i', strtotime($dados['hora']));?></font></font></b><br /><br />
                  <?php				 echo "</tr>";
 				
-}}?> </tr>
+}?> </tr>
 
 
 			</table> <br />
-
-       <div id="footer">
-	<p class="legal">
-		&copy;2014, Centro Educacional Marista <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
-		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-		Desenvolvido por <a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Lucas Lunardelli</b></a>
-		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-		Direitos Autorais <a href="http://duolondrina.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Duo Produções</b></a>. </p>
-	<p class="links">
-		<a href="http://silvanalunardelli.com.br/" style="text-decoration:none" target="_blank"><font color="#000000"><b>Silvana Lunardelli</b></a>
-		&nbsp;&bull;&nbsp;
-		<a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Outros Projetos</b> </a>
-	</p>
-</div>
+<?php 
+include ("rodape.php");
+?>
 </div> 
 <br />
 <br />

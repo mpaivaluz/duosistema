@@ -2,15 +2,15 @@
 
 <div id="footer">
 	<p class="legal">
-		&copy;2014, Centro Educacional Marista  <a href="http://www.solmarista.org.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Irmão Acácio</b>
+		<b>Endereço</b>: R. Fernando de Noronha, 1389 - Centro, Londrina - PR
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-		Desenvolvido por <a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Lucas Lunardelli</b></a>
+		<b>Telefone</b>: (43) 3025-3152 
 		&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-		Direitos Autorais <a href="http://duolondrina.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Duo Produções</b></a>. </p>
+		<b>Atendimento</b>: Segunda a sexta-feira das 09:00 às 18:00 </p>
 	<p class="links">
-		<a href="http://silvanalunardelli.com.br/" style="text-decoration:none" target="_blank"><font color="#000000"><b>Silvana Lunardelli</b></a>
+		<a href="https://www.facebook.com/slcoproducao/" style="text-decoration:none" target="_blank"><font color="#000000"><b>Facebook</b></a>
 		&nbsp;&bull;&nbsp;
-		<a href="http://blogcinenoticias.blogspot.com.br/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Outros Projetos</b> </a>
+		<a href="https://www.instagram.com/slcoproducao/"style="text-decoration:none" target="_blank"><font color="#000000"><b>Instagram</b> </a>
 	</p>
 </div>
 </div>
